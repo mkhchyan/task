@@ -1,0 +1,400 @@
+# FRONTEND REACT TEST
+
+Hi dear programmer, prepare your mind 🧠 and fingers 🖐️ to show us your skills 🚀 in action.
+
+As we looking forward to collaborate together, this test is here to give us a more precise appreciation of your capabilities to solve problems, think out of 📦 and produce quality materials.
+
+This test will span over a few days 🕥, but you will not be penalized if you do not complete the entire exercise in time. The goal of this test is not only to test your coding skills, but also logic, problem resolution and time management.
+
+The test is separate in 2 main kind of exercices:
+
+- knowledge questions
+- coding project
+
+This file is using _Markdown language_ (\*.md) for templating 📄, check the [official guide](https://www.markdownguide.org/basic-syntax/) and [gitlab guide](https://docs.gitlab.com/ee/user/markdown.html) to learn syntax.
+
+Good luck
+
+---
+
+[[_TOC_]]
+
+---
+
+## <mark>Instructions</mark>
+
+To answer question, just modify this file directly.
+
+> _Every questions should be commited separately._
+> Please, put as commit message the question title (ex: `Q1`).
+
+If questions need an anwer, write below each question.
+If questions is MCQ (multiple choice question), please check the correct `[ ]` answer(s) by ading a `[x]` between brackets.
+
+> To open in VSCode the markdown preview, just type `Ctrl + Shift + V` and drag it to the side.
+
+Reminder, you VM is installed with `WSL Ubuntu`, `Node 18` and `NPM`. When you will open you VSCode editor, accept project recommandation in notifications to install needed extensions. **Always open projects in `WSL`, not windows.** Contact @romain-g if you need help.
+
+> Tip 💁‍♂️ you can open repository directly from VSCode by clicking in VSCode option in gitlab `clone` actions
+> ![Cloning step](assets/cloning.jpg 'You can open repository in VSCode directly')
+
+## Questions
+
+### 1 - Git
+
+#### 1.1 - Create a new branch from `main` and named it `test`.
+
+```
+git checkout -b test
+```
+
+#### 1.2 - What is the difference between `Git` and `Github`? Why we need tools like `Git` in application development?
+
+```
+Git is a version control system that llets us manage and keep track of your sourse code history. Github is a cloud-based hosting service that lets us manage Git repositories. They help us to better manage them. 
+
+```
+
+#### 1.3 - What is the difference between git fetch and git pull?
+
+```
+Git fetch is the command that tells the local repository that there are changes available in the remote repository without bringing the changes into the local repository. Git pull brings the copy of the remote directory changes into local repository.
+```
+
+#### 1.4 - How to revert a commit already pushed?
+
+- [ ] `git rollback --latest`
+- [ ] Modify files and `git commit -m 'Correction'`
+- [ x ] `git revert <commit-id>`
+
+#### 1.5 - How to delete a local branch?
+
+- [ ] `git branch --rm <branch>`
+- [ ] Open `.git` and delete files
+- [ x ] `git branch -D <branch>`
+
+Will delete local branch also delete distant one?
+
+### 2 - HTML
+
+#### 2.1 - What is the purpose of the `alt` attribute on images? 
+
+```
+
+ It's specifies an alternate text for image, if it can't displayed 
+
+```
+
+#### 2.2 - How many `h1` a web page should contains?
+ 
+``` 
+The web page should have only one h1 tag 
+
+```
+
+#### 2.3 - What are `defer` and `async` attributes on a `<script>` tag?
+
+#### 2.4 - Which of these `meta` tags are correct and crawled by search engines nowadays?
+
+- [ ] `<meta name="keywords" content="i,love,html" />`
+- [ ] `<meta name="description" content="SEO is hard though" />`
+- [ ] `<meta type="title" content="Maybe i will answer all questions true" />`
+- [ x ] `<meta charset="UTF-8">`
+
+#### 2.5 - Does using `p` or `div` really matter for text content?
+
+### 3 - CSS
+
+#### 3.1 - Which property(ies) below is (are) applied outside of `border`?
+
+- [ ] `padding`
+- [ ] `content`
+- [ x ] `margin`
+
+#### 3.2 - What is the purpose of the instruction `box-sizing: border-box;` ?
+
+```
+It allow us to include the padding and border in an element's total width and height
+
+```
+
+#### 3.3 - Does removing `outline` on focused element a good practice? Why?
+
+#### 3.4 - How do you center a element both vertically and horizontally in CSS? Write your code between quotes bellow.
+
+```html
+<div class="wrapper">
+  <div class="centered"></div>
+</div>
+```
+
+```css
+# Write your css here
+
+```
+.centered {
+  margin: auto;
+}
+
+```
+
+```
+
+#### 3.5 - Visit this [link](https://cssbattle.dev/play/109), and do exercice by replicating the mockup in right aside. When finish, please create in root folder of this repository a file called `q3.4.html` and paste your written code inside.
+
+### 4 - Javascript ES6
+
+#### 4.1 - What are the differences between var, let, const and no keyword statements?
+
+```
+Var is function scoped, and let and const are block scoped. We use const if we have value which is immutable. 
+
+```
+
+#### 4.2 - What is the difference between the equality operators `==` and `===`?
+
+```
+ The '==' compares for equality without checking the types, '===' it's strict equality operator, the operator compares if two values are the same type or not  
+ 
+```
+
+#### 4.3 - What is a callback? Can you show an example using one?
+
+``` 
+Callback is a function passed as an argument to another function. 
+
+```
+
+#### 4.4 - How do you clone an object in JavaScript?
+
+```
+1. spread - {...data}
+2. JSON - JSON.parse(JSON.stringify(data))
+```
+
+#### 4.5 - What is CORS?
+
+```
+CORS is an HTTP header based mechanism that allows a server to indicate any origins other than its own from which a browser should permit loading resources.
+
+```
+
+### 5 - React
+
+#### 5.1 - What are portals in React?
+
+```
+Portals provide a first-class way to render children into a DOM node that exists outside the DOM hierarchy of the parent component
+```
+
+#### 5.2 - Look at the code below, which solution property would you choose to fil the `key` prop in `map` function.
+
+```js
+const users = [
+  {
+    _id: 1,
+    name: 'Alan Turing',
+    birth: 1912,
+    project: 'Turing Machine',
+  },
+  {
+    _id: 2,
+    name: 'Niklaus Wirth',
+    birth: 1934,
+    project: 'PASCAL',
+  },
+  {
+    _id: 3,
+    name: 'Dennis Ritchie',
+    birth: 1941,
+    project: 'C',
+  },
+  {
+    _id: 4,
+    name: 'Kenneth Lane Thompson',
+    birth: 1943,
+    project: 'Unix',
+  },
+  {
+    _id: 5,
+    name: 'Guido van Rossum',
+    birth: 1956,
+    project: 'Python',
+  },
+  {
+    _id: 6,
+    name: 'Linus Torvalds',
+    birth: 1969,
+    project: 'Linux',
+  },
+]
+```
+
+```
+ We should use 'id' as key 
+ ```
+
+
+- [ ] We do not need to fill `key` prop?
+
+```jsx
+users.map((user) => {
+  return (
+    <Card>
+      <h3>{user.name}</h3>
+      <p>{user.project}</p>
+    </Card>
+  )
+})
+```
+
+- [ ] Use a property of `user` object?
+
+```jsx
+users.map((user) => {
+  return (
+    <Card key={user._id}>
+      <h3>{user.name}</h3>
+      <p>{user.project}</p>
+    </Card>
+  )
+})
+```
+
+- [ ] Use the index of `map`?
+
+```jsx
+users.map((user, index) => {
+  return (
+    <Card key={index}>
+      <h3>{user.name}</h3>
+      <p>{user.project}</p>
+    </Card>
+  )
+})
+```
+
+#### 5.3 - What's wrong with this code and why? Please correct it.
+
+```jsx
+import { useEffect, useState } from 'react'
+
+function Counter() {
+  const [count, setCount] = useState(0)
+
+  useEffect(() => setCount(count + 1))
+
+  return (
+    <div>
+      <div>Number of changes: {count}</div>
+    </div>
+  )
+}
+```
+
+#### 5.4 - What is `package.json` and how to init a npm project with `react`?
+
+```
+package.json is a file where you can specify the name of application, the version, the license the dependencies the app needs. 
+
+npm init
+
+```
+
+#### 5.5 - What is the Virtual DOM?
+
+```
+The Virtual DOM is a programming concept where an UI is kept in memory and synced with the real DOM by a library called REactDOM
+```
+
+### 6 - General knowledge
+
+#### 6.1 - Can you name some `react` alternatives?
+
+```
+Angular, Vue.js, jquery
+```
+
+#### 6.2 - What is Server Side Rendering?
+
+```
+It is an application's ability to convert HTML files on the server into a fully renderes HTML page for the client
+```
+
+#### 6.3 - What is the difference between NodeJS and Javascript?
+
+```
+Javascript is a programming language which runs in web browsers. Node.js is an interpreter on running environment for Javascript which holds required libraries and more.
+```
+
+#### 6.4 - What is an API?
+
+```
+An application programming interface is a way for two or more computer programs to communicate with each other
+```
+
+#### 6.5 - Can we do desktop and mobile application with `react`? If yesn which `frameworks` would you use?
+
+```
+For mobile applications we would use React Native
+
+```
+
+---
+
+## Mini Project 🗃️
+
+For this exercice, please refactor an HTML website into a react single page application. Estimated time is 2-3 days.
+
+> 😅 A son asked his father (a programmer) why the sun rises in the east, and sets in the west. His response? It works, don’t touch it!
+
+Old website project is accessible [here](https://gitlab.uni.int/uni/others/hrs-technology). Public url is https://hrs-technology.com/.
+
+- Use assets from old repository and improve them.
+- Design can be improved depending on your skills.
+- Add animations and dark mode toggle.
+- Add multilanguage support for english (default) and french using browser language detection and cookie storage.
+
+> Again, each of this steps should be in a separate commit.
+
+In the current repository, use the `./app` folder to write the new version. It's empty, you have to install by yourself everything except `git`, `npm` and `nodejs` which are already installed in you VM.
+
+You will check your ability to work independently 💪, to look for good solutions on the Internet 💡 and to carry out quality work 📏 in a limited time 🕥.
+
+> Copy-and-Paste was programmed by programmers for programmers actually. 🙄
+
+We will also look at `Lighthouse scores`, so improve _accessibility_, _performances_, _best pratices_ and _SEO_ 🤨.
+
+### Requirements
+
+You have to use `react` 😄!
+
+### Recommandations
+
+You are you free to pick the technologies and tools you want. However, here is a list of tools we are using in our company that you might want to try. Note that you will not gain any bonus by using them.
+
+- [Vite](https://vitejs.dev/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [Yarn](https://yarnpkg.com/)
+- [TailwindCSS](https://tailwindui.com/)
+- [React-Intl](https://formatjs.io/docs/react-intl/)
+- [Astro](https://astro.build/)
+
+---
+
+## Final thoughts
+
+If you can record yourself solving a rubik's cube 🧊 in less than 2 minutes, then we might give you a bonus 😆😂 #joking
+
+### Optional open questions (not rated)
+
+#### What do you think about the current state of frontend and Javascript?
+
+> How do you comfort a JavaScript bug? You console it 🤔
+
+#### What do you think are the strengths and weakness of JS comparing to others languages?
+
+> Don't trust JavaScript programmers. All they do is promises but they never callback. 🤭
+
+When exercice is complete, please notify your exercice overseer. We hope sincerely to give you a positive feedback!
