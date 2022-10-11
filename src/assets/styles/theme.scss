@@ -1,0 +1,341 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+:root {
+    --secondary-bg: rgb(43, 55, 67);
+    --white: rgb(255, 255, 255);
+    --dark-bg: rgb(33, 46, 55);
+}
+
+.dark {
+    --bg: var(--dark-bg);
+    --clr: var(--white);
+    --sec-bg: var(--secondary-bg);
+}
+
+body {
+    background: var(--bg);
+
+    // min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+    background: var(--sec-bg);
+    color: var(--clr);
+}
+
+
+//darkmodeToggle
+
+.theme-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+//navbar
+.navbar {
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0.5em 0.5em #ccc;
+
+    .col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .collapseble-button {
+            display: none;
+        }
+    }
+
+    nav {
+        .links {
+            ul {
+                display: flex;
+                list-style-type: none;
+                align-items: center;
+                justify-content: center;
+                margin: 0.3rem 2rem;
+                color: var(--clr);
+
+                li {
+                    a {
+                        text-decoration: none;
+                        font-size: 1.2rem;
+                        color: var(--clr);
+                    }
+
+                    text-transform: uppercase;
+                    margin: 0 1rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+    .navbar.active {
+        nav {
+            display: block;
+        }
+    }
+
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .col {
+            .collapseble-button {
+                display: block;
+                font-size: 4rem;
+            }
+        }
+
+        nav {
+            display: none;
+
+            .links {
+                ul {
+                    flex-direction: column;
+                    align-items: flex-start;
+                    margin: 0.3rem 0rem;
+
+                    li {
+                        margin: 2rem 0 0 0;
+
+                        &:first-of-type {
+                            margin-top: 4rem;
+                        }
+
+                        a {
+                            font-size: x-large;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+.paragraph,
+.footer,
+.quote {
+    color: var(--clr);
+}
+
+.socialIcon {
+    margin: 10px;
+
+    &:hover {
+        transform: scale(1.5);
+        transition: 900ms;
+    }
+
+    @media (min-width: 767px) {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+.btn_group {
+    margin: auto;
+}
+
+//about
+.title {
+    margin-bottom: 2rem;
+
+    h2 {
+        margin-bottom: 0.7rem;
+        font-size: xx-large;
+        color: var(--clr);
+    }
+}
+
+.bottom-arrow:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    border-top: 25px solid hsl(0, 0%, 100%);
+    border-left: 50px solid transparent;
+    border-right: 50px solid transparent;
+}
+
+.about-container {
+    background-color: rgb(43, 55, 67);
+    color: white;
+    margin: 2rem;
+    border-radius: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+    .container {
+        margin: 0 10%;
+        padding: 5rem 0;
+
+        .details {
+
+            p {
+                color: var(--clr);
+                // line-height: 1.3rem;
+                font-size: large;
+                text-align: justify;
+                width: 90%;
+            }
+
+            button {
+                margin-top: 3rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .content_wrapper {
+        display: flex;
+        flex-direction: column;
+
+        .left_content_wrapper>img {
+            width: 100%;
+        }
+    }
+
+    .about-container {
+        .container {
+            .details {
+                p {
+                    font-size: 0.8rem;
+                    line-height: 1.7rem;
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+
+    padding: 3rem;
+}
+
+
+//ScrollToTop Button
+
+.scrollToTop {
+    background-color: rgb(18, 18, 88);
+    border-radius: 100%;
+    position: fixed;
+    height: 4rem;
+    width: 4rem;
+    bottom: 40px;
+    right: 40px;
+    z-index: 2000;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    svg {
+        color: white;
+        font-size: 2rem;
+    }
+
+    &:hover {
+        background-color: white;
+
+        svg {
+            color: rgb(18, 18, 88);
+        }
+    }
+}
+
+
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 2rem;
+
+    outline: hidden;
+
+    @media (min-width: 767px) {
+        padding-top: 2rem;
+        flex-direction: row-reverse;
+        align-items: center;
+        gap: 1rem;
+    }
+}
+
+.imgContainer {
+    width: 100;
+
+    @media (min-width: 767px) {
+        width: 50%;
+    }
+}
+
+.img {
+    width: 50%;
+    flex-grow: 0;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
+
+    @media (min-width: 1024px) {
+        width: 120%;
+    }
+
+}
+
+.text {
+    text-align: center;
+    flex-shrink: 0;
+    font-size: 1rem;
+
+    @media (min-width: 767px) {
+        width: 50%;
+        text-align: left;
+        // font-size: 1rem;
+
+    }
+}
+
+.title {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: var(--clr);
+
+    @media (min-width: 767px) {
+        font-size: 3.25rem;
+        line-height: 1.25;
+        margin-top: 0;
+    }
+}
+
+.description {
+    color: var(--clr);
+    margin-bottom: 1.25rem;
+}
